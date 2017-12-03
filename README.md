@@ -1,2 +1,2 @@
-# Project2
+# SoccerSeasons
 Youth Soccer Team Database for CS142 Project
