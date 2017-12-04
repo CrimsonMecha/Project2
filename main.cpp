@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "Player.h"
+#include "Season.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    
+    Season s;
+    s.display(2000);
+    
     return 0;
 }
+
