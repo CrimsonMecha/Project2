@@ -21,15 +21,18 @@ class Season{
 public:
     void start_new_season(int year);
     void add_player(std::string name, int yob, std::string registration_status);
-    bool look_up_player(std::string name);
+    void look_up_player(std::string name);
     void edit_player(std::string name);
     void delete_player(std::string name);
     void produce_file(std::string category);
     void display(int year);
     bool execute_choice(int user_choice);
+    
+    int year() { return year_; }
 private:
     PlayerMap player_map;
     PlayerMap::iterator current_player = player_map.begin();
+    int year_;
     
 };
 

@@ -29,7 +29,7 @@ void Season::display(int year) {
         if (want_stats) {
             //display_stats();
         } else {
-            //display_current_player();
+            current_player->second.display();
         }
         cout << seperator << endl;
         cout << "[1]Start a new season [2]Add a player" << endl;
@@ -46,6 +46,14 @@ void Season::display(int year) {
             display(year);
         } else {
             running = execute_choice(user_choice);
+        }
+    }
+}
+
+void Season::look_up_player(string name){
+    for(auto itr = player_map.begin(); itr != player_map.end(); ++itr){
+        if(itr->first==name){
+            current_player=itr;
         }
     }
 }
@@ -69,6 +77,7 @@ bool Season::execute_choice(int user_choice) {
             string name;
             getline(cin, name);
             //bool look_up_player(name);
+            look_up_player(name);
             return true;
         }
         case 4:
