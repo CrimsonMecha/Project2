@@ -24,6 +24,11 @@ public:
     std::string category() { return category_; }
     std::string registration_status() { return registration_status_; }
     
+    void set_name(const std::string & name) { name_ = name; }
+    void set_yob(int yob) { yob_ = yob; }
+    void set_category(const std::string & category) { category_ = category; }
+    void set_registration_status(const std::string & reg) { registration_status_ = reg; }
+    
     void display();
     
 private:

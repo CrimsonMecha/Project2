@@ -7,13 +7,16 @@
 //
 
 #include <iostream>
+using std::cout;
+using std::cin;
 #include "Player.h"
 #include "Season.h"
 
 int main() {
     
     Season s;
-    s.display(2000);
+    s.start_new_season();
+    s.display();
     
     return 0;
 }
