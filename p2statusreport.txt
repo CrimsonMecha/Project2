@@ -1,0 +1,6 @@
+// CS142 Project 2 
+// Written By : Calen Bender, Peter Valentine, Jacob Burrit (12/2/2017)
+
+The program works to specification -- an alteration in design was made regarding the produce_file() method, 
+in which instead of simply naming the file after the category specified, we included the year in the filename. This is a simple 
+additional level of organization that would be appreciated by a client. 

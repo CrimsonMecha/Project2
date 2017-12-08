@@ -1,0 +1,46 @@
+// Project 2
+// Designed by Calen Bender, Jacob Burritt, Peter Valentine
+
+
+COMPONENT: class PlayerMap
+
+A map that stores the player data using their name as the key, and the Player object as the element. 
+Uses the following methods:
+
+run() : runs the program, and starts a new seasons
+
+A switch statement allows the user to run the different commands, which are listed and explained below:
+ 
+start_new_season() : User inputs a year, and then creates a new PlayerMap to store new players in, and deletes the old season.
+
+add_player() : adds a new player object to the map
+	Creates a new Player object using either the default constructor or by reading the data in from the user, 
+	one element at a time. Method runs a large if/else if statement on the year of birth to determine the player's 
+	classification.
+
+look_up() : user provides a name, and the program searches the map for the key that matches the name.
+	If a match is found, that players data is displayed to the user. If not, the user is 
+	shown an error message.
+
+edit_player() : User searches a player, and edits it.
+		
+delete_player() : User is prompted to search for a player by name (key). 
+		Deletes the entire searched PlayerMap key and its associated element. 
+	
+produce_file() : The user selects a category, or selects "all", and the file outputs the
+		relevant data to a file. To maintain organization for each case (not using
+		a switch statement, using a string of || ) a temp PlayerMap is used. 
+	
+display_statistics() : prints out, for each category, who has paid their registration or not. 
+	
+COMPONENT: class Player
+
+Object to be used as the element in the PlayerMap. Contains the Player's name_ (string), yob_(int),
+category_(string), and registration_status_(string). The classificiation is based on the player's year of birth, and the
+registration status is whether or not the player has paid registration fees. 
+
+Aside from two constructors (one default, one defined), there are only getter methods in Player:
+- name() : returns name_;
+- yob() : returns yob_;
+- category() : returns category_;
+- registration_status() : returns registration_status_

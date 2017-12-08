@@ -1,0 +1,23 @@
+// CS142 Project 2 
+// Written By : Calen Bender, Peter Valentine, Jacob Burrit (12/2/2017)
+
+SPECIFICATION
+
+OVERVIEW
+
+A simple roster program that allows the user to add, remove, and edit players from a mapped soccer team roster.
+It does not allow for the deletion of a roster, only the creation of a new season/roster.
+
+DETAILS
+
+The program utilizes a class "player" that stores the name, year of birth, category, and registration status for each player.
+These player objects are stored in a map PlayerMap that uses the player's name as a key, and the "player"object as the element of the map.
+These player maps are called "seasons", and can be created on runtime or through the use of the start_new_season() command.
+
+Additionally, the user will be able to display a player, display their registration status (sorted by classification),
+add or delete a player, and export all of the player data to a new file. 
+
+
+NOTES FOR LATER VERSIONS
+
+seasons could go un-deleted, and be accessible after a new one is made. 
