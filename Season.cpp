@@ -56,8 +56,20 @@ void Season::start_new_season()
 {
     
     char confirmation;
-    cout << "enter the current year: ";
-    cin >> year_;
+    
+    bool is_int = false;
+    while(!is_int){
+        cout << "Enter the year: ";
+        cin >> year_;
+        if(!cin){
+            cout<<"Please enter an integer" << endl;
+            cin.clear();
+            cin.ignore(256,'\n');
+        } else {
+            is_int = true;
+        }
+    }
+    
     cout << "Are you sure you want to delete the " << year_ << " season? (y/n)";
     cin >> confirmation;
     if(confirmation == 'y'){
@@ -200,6 +212,10 @@ void Season::produce_file()
     
     ofstream out;
     out.open(file_name);
+    if(!out){
+        cout << "Could not open file.\n";
+        return;
+    }
     
     if(file_category == "all"){
         for(auto itr = player_map.begin(); itr != player_map.end(); ++itr){
